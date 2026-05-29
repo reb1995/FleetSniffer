@@ -72,7 +72,7 @@ The console refreshes every 5 seconds, providing a real-time, sorted view of the
 Build Instructions
 ------------------
 
-1.  **Initialize the environment**: . /path/to/esp-idf-v5.5.2/export.sh
+1.  **Initialize the environment**: . /path/to/esp-idf-v5.5.4/export.sh
 2.  **Set your target chip**: idf.py set-target esp32c5 (or esp32c6 / esp32s3)
 3.  **Build the project**: idf.py build
 4.  **Flash and monitor**: idf.py flash monitor
