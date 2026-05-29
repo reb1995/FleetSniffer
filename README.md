@@ -76,3 +76,25 @@ Build Instructions
 2.  **Set your target chip**: idf.py set-target esp32c5 (or esp32c6 / esp32s3)
 3.  **Build the project**: idf.py build
 4.  **Flash and monitor**: idf.py flash monitor
+
+Materials
+------------------
+
+1.  **Seeed Studios Xiao**: https://www.seeedstudio.com/Seeed-Studio-XIAO-c-2428.html
+3.  **Seeed Studios Xiao GPS**: https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html
+3.  **ElectroCookie Mini PCB**: https://www.amazon.com/dp/B081MSKJJX
+4.  **3V Active Buzzer**: https://www.amazon.com/dp/B07VRK7ZPF
+4.  **2mm Screws**: https://www.amazon.com/dp/B0CQP76MD8
+
+
+Assembly
+------------------
+
+1. **Solder female headers onto the L76K GPS board.**
+2. **Make sure Xiao board is fully seated into the proto board.**
+2. **Solder at least the GND and D9 pins on the Xiao to the protoboard at F2 and F5.**
+3. **Solder the positive leg of the beeper to I5 and negative to I2.**
+4. **Seat L76K board female pints to Xiao board male pins.**
+5. **Wrap GPS antenna wire around antenna and neatly tuck it under proto board, I promise it fits.**
+6. **Screw 4x 2mm screws through proto board corners to lock into base.**
+7. **Redesign top to actually fit buzzer and USB Cables or print top as is and use a dremel and a dream to make it fit.**
