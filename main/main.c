@@ -69,10 +69,10 @@ static DRAM_ATTR const char *target_ble_names[] = {};
 
 static DRAM_ATTR const char *target_ssids[] = {
 //    "", // Test SSID
-    "EMS", // Looked to be WEMS and Wake Fire
-    "Fire", // Highway Patrol Deputy Car?
-    "Police", // West Virginia Police Department
-    "Axon" // Maybe? lol
+    "EMS", // Generic EMS
+    "Fire", // Generic Fire
+    "Police", // Generic Police
+    "Axon" // Generic Axon
 };
 
 static DRAM_ATTR const target_oui_t target_ouis[] = {
@@ -101,7 +101,7 @@ static DRAM_ATTR const target_oui_t target_ouis[] = {
     { {0xE8, 0x4E, 0x06}, "EDUP" } // Cop dashcams
 };
 
-// Mostly SSIDs but could also be bluetooth names.
+// Mostly SSIDs but could also be bluetooth names. Common false positives added.
 static DRAM_ATTR const char *ignore_names[] = {
     "systems", // FP protection. Stops common EMS false positive
     "Public WiFi", // FP.
