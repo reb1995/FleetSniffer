@@ -4,3 +4,4 @@ sdkconfig.old
 *.swp
 env/
 *.html
+map/*.txt
