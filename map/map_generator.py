@@ -17,11 +17,13 @@ def generate_osm_map(log_file, output_html):
                     mac = parts[0]
                     rssi = parts[5]
                     ssid = parts[6]
-                    popup_text = f"<b>SSID:</b> {ssid}<br><b>MAC:</b> {mac}<br><b>RSSI:</b> {rssi}"
+                    timestamp = parts[7].strip('[]') + " UTC"
+                    popup_text = f"<b>SSID:</b> {ssid}<br><b>MAC:</b> {mac}<br><b>RSSI:</b> {rssi}<br><b>Time:</b> {timestamp}"
+
                     folium.Marker(
                         [lat, lon],
                         popup=popup_text,
-                        tooltip=mac
+                        tooltip=ssid
                     ).add_to(m)
                     bounds.append([lat, lon])
     if bounds:
