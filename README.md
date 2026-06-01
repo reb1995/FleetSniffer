@@ -114,6 +114,7 @@ If using a GPS, you can map the hits later. In the map folder, there is a demo l
 
 ``` bash
 python3 -m venv env
+. env/bin/activate
 pip install -r requirements.txt
 python map_generator.py demo_log.txt
 ```
