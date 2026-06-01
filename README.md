@@ -90,11 +90,23 @@ Materials
 Assembly
 ------------------
 
-1. **Solder female headers onto the L76K GPS board.**
-2. **Make sure Xiao board is fully seated into the proto board.**
-2. **Solder at least the GND and D9 pins on the Xiao to the protoboard at F2 and F5.**
-3. **Solder the positive leg of the beeper to I5 and negative to I2.**
-4. **Seat L76K board female pints to Xiao board male pins.**
-5. **Wrap GPS antenna wire around antenna and neatly tuck it under proto board, I promise it fits.**
-6. **Screw 4x 2mm screws through proto board corners to lock into base.**
-7. **Redesign top to actually fit buzzer and USB Cables or print top as is and use a dremel and a dream to make it fit.**
+1. Solder female headers onto the L76K GPS board.
+2. Make sure Xiao board is fully seated into the proto board.
+2. Solder at least the GND and D9 pins on the Xiao to the protoboard at F2 and F5.
+3. Solder the positive leg of the beeper to I5 and negative to I2.
+4. Seat L76K board female pints to Xiao board male pins.
+5. Wrap GPS antenna wire around antenna and neatly tuck it under proto board, I promise it fits.
+6. Screw 4x 2mm screws through proto board corners to lock into base.
+7. Redesign top to actually fit buzzer and USB Cables or print top as is and use a dremel and a dream to make it fit.
+
+
+Mapping Targets
+------------------
+
+If using a GPS, you can map the hits later. In the map folder, there is a demo log and python script to generate an index.html file that will map the hits on OpenStreetMap.
+
+``` bash
+python3 -m venv env
+pip install -r requirements.txt
+python map_generator.py demo_log.txt
+```
