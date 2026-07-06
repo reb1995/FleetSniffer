@@ -1,4 +1,4 @@
 --- SAVED TARGETS ---
-MAC Address       | Total | P-Req | P-Rsp | Beacons | RSSI | SSID
-xx:xx:xx:xx:xx:xx | 3     | 0     | 0     | 3       | -48  | Network | [YYYY-MM-DD 20:10:00] | 38.89555, -77.02519
-xx:xx:xx:xx:xx:xx | 3     | 0     | 0     | 3       | -59  | Network Guest | [YYYY-MM-DD 20:10:00] | 38.89555, -77.02519
+MAC Address       | Total | P-Req | P-Rsp | Beacons | RSSI | Chan | SSID | Vendor
+xx:xx:xx:xx:xx:xx | 3     | 0     | 0     | 3       | -48  | 1    | Network | MegaVendor | [YYYY-MM-DD 20:10:00] | 38.89555, -77.02519
+xx:xx:xx:xx:xx:xx | 3     | 0     | 0     | 3       | -59  | 40   | Network Guest | MegaVendor | [YYYY-MM-DD 20:10:00] | 38.89555, -77.02519
