@@ -1,0 +1,48 @@
+name: ESP-IDF Automatic Build on Release
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: [esp32c5, esp32c6, esp32s3]
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: 'recursive'
+    - name: Build with ESP-IDF
+      uses: espressif/esp-idf-ci-action@v1
+      with:
+        esp_idf_version: v5.5.4
+        target: ${{ matrix.target }}
+        path: '.'
+    - name: Merge Binaries
+      run: |
+        sudo chown -R $USER:$USER build
+        pip install esptool
+        cd build
+        esptool --chip ${{ matrix.target }} merge-bin -o ${{ matrix.target }}-merged.bin @flash_args
+    - name: Upload Intermediary Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.target }}-binary
+        path: build/${{ matrix.target }}-merged.bin
+
+  publish-release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Download All Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        pattern: '*-binary'
+        merge-multiple: true
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: '*-merged.bin'
