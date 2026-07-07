@@ -395,7 +395,7 @@ void append_target_to_file(device_stat_t *dev) {
         fprintf(f, "%02x:%02x:%02x:%02x:%02x:%02x | %-5lu | %-5lu | %-5lu | %-7lu | %-4d | %-4u | %s | %s\n",
                 dev->mac[0], dev->mac[1], dev->mac[2], dev->mac[3], dev->mac[4], dev->mac[5],
                 dev->packet_count, dev->probe_req_count, dev->probe_resp_count, dev->beacon_count,
-                dev->strongest_rssi, dev->channel, dev->name_ssid[0] ? dev->name_ssid : "<no name>", vendor);
+                dev->strongest_rssi, dev->channel, dev->name_ssid[0] ? dev->name_ssid : "<hidden>", vendor);
     }
     fclose(f);
 }
